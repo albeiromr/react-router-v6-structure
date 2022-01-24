@@ -1,0 +1,103 @@
+.home{
+    background: darkcyan;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+
+    h1 {
+        color: white;
+        margin: 0;
+    }
+}
+
+.public-route {
+    background: rgb(184, 142, 128);
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+
+    h1 {
+        color: white;
+        margin: 0;
+    }
+}
+
+.private-route {
+    background: rgb(129, 128, 184);
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        color: white;
+        margin: 0;
+    }
+}
+
+.login {
+    background: rgb(175, 153, 81);
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+
+    h1 {
+        color: white;
+        margin: 0;
+    }
+}
+
+.error-404 {
+    background: rgb(175, 81, 94);
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+
+    h1 {
+        color: white;
+        margin: 0;
+    }
+}
+
+.nested-index {
+    margin-top: 40px;
+    padding: 20px;
+    width: auto;
+    height: 700px;
+    background: rgb(146, 153, 115);
+}
+
+.nested-one{
+    margin-top: 40px;
+    padding: 20px;
+    width: auto;
+    height: 700px;
+    background: rgb(128, 95, 100);
+}
+
+.nested-two{
+    margin-top: 40px;
+    padding: 20px;
+    width: auto;
+    height: 700px;
+    background: rgb(83, 104, 122);
+}
+
+.nested-404{
+    margin-top: 40px;
+    padding: 20px;
+    width: auto;
+    height: 700px;
+    background: rgb(122, 83, 93);
+}
+
+.link {
+    color: white;
+    margin: 10px;
+}
+
+.selected-url {
+    color: #21660c;
+}
