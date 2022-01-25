@@ -1,3 +1,7 @@
+.navigation-bar {
+    margin: 60px 0;
+}
+
 .home{
     background: rgb(109, 151, 151);
     width: 100vw;
@@ -23,7 +27,7 @@
 }
 
 .private-route {
-    background: rgb(129, 128, 184);
+    background: rgb(112, 111, 151);
     width: 100vw;
     height: 100vh;
     text-align: center;
@@ -38,7 +42,7 @@
 }
 
 .login {
-    background: rgb(175, 153, 81);
+    background: rgb(145, 134, 97);
     width: 100vw;
     height: 100vh;
     text-align: center;
@@ -50,7 +54,7 @@
 }
 
 .error-404 {
-    background: rgb(175, 81, 94);
+    background: rgb(133, 90, 97);
     width: 100vw;
     height: 100vh;
     text-align: center;
