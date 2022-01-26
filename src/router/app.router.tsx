@@ -9,6 +9,7 @@ import {
     PrivateRouteComponent, 
     PublicRouteComponent 
 } from './testing-components/test-components.component';
+import BaseGuard from './guards/base.guard';
 import  App  from '../App'
 
 const AppRouter = () => {
@@ -19,7 +20,7 @@ const AppRouter = () => {
                     <Route path="/" element={<HomeComponent />}/>
                     <Route path="/login" element={<LoginComponent />} />
                     <Route path="/public-route" element={<PublicRouteComponent />}/>
-                    <Route path="/private-route" element={<PrivateRouteComponent />}>
+                    <Route path="/private-route" element={<BaseGuard ><PrivateRouteComponent /></BaseGuard>}>
                         <Route index element={<NestedIndexRoute />}/>
                         <Route path="nested-route-one" element={<NestedRouteOne />}/>
                         <Route path="nested-route-two" element={<NestedRouteTwo />}/>
