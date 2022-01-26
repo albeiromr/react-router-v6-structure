@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { ReactElement, useState } from 'react';
 import { Navigate, RouteProps} from "react-router-dom";
 
 interface IBaseGuardProps extends RouteProps {
@@ -6,8 +6,10 @@ interface IBaseGuardProps extends RouteProps {
 }
 
 const BaseGuard = ({ children }: IBaseGuardProps) => {
-    let isAuthenticated = false;
-    return isAuthenticated ? children : <Navigate to="/login" />;
+
+    const [ isLogged ] = useState<boolean>(false);
+
+    return isLogged ? children : <Navigate to="/login" />;
 }
 
 export default BaseGuard;  

@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { 
     Error404Component, 
     HomeComponent, 
@@ -9,8 +9,10 @@ import {
     PrivateRouteComponent, 
     PublicRouteComponent 
 } from './testing-components/test-components.component';
-import BaseGuard from './guards/base.guard';
 import  App  from '../App'
+import BaseGuard from './guards/base.guard';
+import PrivateRouteGuard from './guards/private-route.guard';
+
 
 const AppRouter = () => {
     return (
@@ -23,7 +25,7 @@ const AppRouter = () => {
                     <Route path="/private-route" element={<BaseGuard ><PrivateRouteComponent /></BaseGuard>}>
                         <Route index element={<NestedIndexRoute />}/>
                         <Route path="nested-route-one" element={<NestedRouteOne />}/>
-                        <Route path="nested-route-two" element={<NestedRouteTwo />}/>
+                        <Route path="nested-route-two" element={<PrivateRouteGuard><NestedRouteTwo /></PrivateRouteGuard>}/>
                     </Route>
                     <Route path="*" element={<Error404Component />} />
                 </Route>
